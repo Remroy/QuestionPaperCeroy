@@ -1,0 +1,130 @@
+
+//ComboBox
+private ComboBox mainDepartmentBox;
+ObservableList<String> mainDepartmentList = FXCollectiosn.observableArrayList("Electrical", "Mechanical", "CSE");
+
+Inside Initialise
+mainDepartmentBox.setValue("Electrical");
+mainDepartmentBox.setItems(mainDepartmentList);
+
+//WebView
+
+private WebView webView;
+private WebEngine  engine;
+
+Inside Initialise
+
+engine = webView.getEngine();
+
+//Next Page
+
+method1
+
+
+private void handleButtonAction(ActionEvent event) throws IOException {
+Parent home_page_parent = FXMLLoader.load(getClass().getResource("FXMLHomePage.fxml");
+Scence home_page_scene= new Scence(home_page_parent);
+Stage app_stage = (Stage)((Node)event.getSource()).getScence().getWindow(); //returns the stage and window means stage
+app_stage.setScene(home_page_scene);
+app_stage.show();
+}
+
+//
+button.onClick(e-> window.stage());
+
+
+
+//temp
+ ObservableList<String> testName = FXCollections.observableArrayList("CT 1","CT 2","CT 3","Univ");
+ test_name.setItems(testName);
+
+ //JFileChooser
+
+ JFileChooser chooser=new JFileChooser();
+ chooser.showOpenDialog(null);
+ File f =chooser.getSelectedFile();
+ String filename= f.getAbsolutePath();
+ jTextField1.setText(filename);
+
+
+//Communication between controller example
+
+in the Main
+
+@FXML Tab1Controller tab1controller;
+@FXML Tab2Controller tab2controller;
+
+and inside initialise
+tab1controller.init(this);
+tab2controller.init(this);
+public String loadb1TextfromTab2(){
+return tab1controller.lbl1.getText();
+}
+
+now inside the tabcontroller
+
+private MainController main;
+@FXML public Label lbl1;
+public void init(MainController mainController){
+main=mainController;
+}
+
+instead found out that use
+
+FXMLLoader fxmlLoader= new FXMLLoader(getClass().getResource("diff_s2.fxml"));
+        Parent root= fxmlLoader.load();
+
+       s2controller s2 = fxmlLoader.getController();
+               s2.loadFName((String)fname);
+
+//JXL jar method of excel
+
+File f=new File("");
+Workbook wb=Workbook.getWorkbook(f);
+Sheet s=wb.getSheet(0);
+int row=s.getRows();
+int col=s.getColumns();
+for(int i=0; i<row; i++)
+{
+    for(int j=0; j<col; j++)
+    {
+        Cell c=s.getCell(j,i);
+        System.out.print(c.getContents());
+    }
+}
+
+but the above is using JExcel JAR which is not useful for us as it doesn't support .xlsx so in case if Apache POI
+
+we use Apache POI, as per POI tutorial following code is there
+
+try( Workbook wb k= WorkbookFactory.create(new File(""))){
+Sheet sheet = wb.getSheetAt(0);
+int rowstart = sheet.getFirstRowNum();
+int rowEnd = sheet.getLastRowNUm();
+for(int i=rowStart; i<rowEnd; i++)
+    {
+        Row row=sheet.getRow(i);
+        for(int j=row.getFirstCellNum(); j<row.getLastCellNum(); j++)
+        {
+            Cell cell = row.getCell(j);
+            System.out.println(cell.getStringCellValue());
+        }
+    }
+}
+
+
+//Slider Listener Property
+// Adding Listener to value property.
+      slider.valueProperty().addListener(new ChangeListener<Number>() {
+
+         @Override
+         public void changed(ObservableValue<? extends Number> observable, //
+               Number oldValue, Number newValue) {
+
+            infoLabel.setText("New value: " + newValue);
+         }
+      });
+
+//
+
+System.out.println("File Name:"+fname+"\n Test Name:" + testName  + "\nSet Number:" + setNumber +"\nDifficulty Percentage:"+diffPercentage);

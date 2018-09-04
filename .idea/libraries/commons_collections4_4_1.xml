@@ -1,0 +1,20 @@
+<component name="libraryTable">
+  <library name="commons-collections4-4.1">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/Desktop/commons-collections4-4.1.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="file://$USER_HOME$/Desktop/xmlbeans-3.0.1/docs/reference" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="file://$USER_HOME$/Desktop/xmlbeans-3.0.1/samples/Any/src" />
+      <root url="file://$USER_HOME$/Desktop/xmlbeans-3.0.1/samples/DateTime/src" />
+      <root url="file://$USER_HOME$/Desktop/xmlbeans-3.0.1/samples/MixedContent/src" />
+      <root url="file://$USER_HOME$/Desktop/xmlbeans-3.0.1/samples/OrderMatters/src" />
+      <root url="file://$USER_HOME$/Desktop/xmlbeans-3.0.1/samples/SchemaEnum/src" />
+      <root url="file://$USER_HOME$/Desktop/xmlbeans-3.0.1/samples/Validation/src" />
+      <root url="file://$USER_HOME$/Desktop/xmlbeans-3.0.1/samples/XQueryXPath/src" />
+      <root url="file://$USER_HOME$/Desktop/xmlbeans-3.0.1/samples/XsdConfig/src" />
+    </SOURCES>
+  </library>
+</component>
